@@ -1,9 +1,9 @@
 require_relative("../models/brand")
 require_relative("../models/trainer")
 
-brand1 = Brand.new({"name" => "adidas"})
-brand2 = Brand.new({"name" => "brooks" })
-brand3 = Brand.new({"name" => "asics"})
+brand1 = Brand.new({"name" => "Adidas"})
+brand2 = Brand.new({"name" => "Brooks" })
+brand3 = Brand.new({"name" => "Asics"})
 
 brand1.save()
 brand2.save()
@@ -11,7 +11,7 @@ brand3.save()
 
 trainer1 = Trainer.new({
   "trainer_name" => "Pulseboost",
-  "description" => "",
+  "description" => "Adidas Pulseboost HD Men's Running Shoes",
   "quantity" => 3,
   "buy_cost" => 10000,
   "sell_price" => 11900,
@@ -20,7 +20,7 @@ trainer1 = Trainer.new({
 
 trainer2 = Trainer.new({
   "trainer_name" => "Ultraboost",
-  "description" => "",
+  "description" => "Adidas Ultra Boost Men's Running Shoes",
   "quantity" => 4,
   "buy_cost" => 9000,
   "sell_price" => 10900,
@@ -29,7 +29,7 @@ trainer2 = Trainer.new({
 
 trainer3 = Trainer.new({
   "trainer_name" => "Adrenaline",
-  "description" => "",
+  "description" => "Brooks Adrenaline GTS 19 Men's Running Shoes",
   "quantity" => 1,
   "buy_cost" => 8000,
   "sell_price" => 10000,
@@ -38,7 +38,7 @@ trainer3 = Trainer.new({
 
 trainer4 = Trainer.new({
   "trainer_name" => "Cascadia",
-  "description" => "",
+  "description" => "Brooks Cascadia 14 Men's Running Shoes",
   "quantity" => 5,
   "buy_cost" => 8500,
   "sell_price" => 9900,
@@ -47,7 +47,7 @@ trainer4 = Trainer.new({
 
 trainer5 = Trainer.new({
   "trainer_name" => "Transcend",
-  "description" => "",
+  "description" => "Brooks Transcend 6 Men's Running Shoes",
   "quantity" => 3,
   "buy_cost" => 7000,
   "sell_price" => 8000,
@@ -56,7 +56,7 @@ trainer5 = Trainer.new({
 
 trainer6 = Trainer.new({
   "trainer_name" => "Gel Kayano",
-  "description" => "",
+  "description" => "Asics Gel-Kayano 25 Men's Running Shoes",
   "quantity" => 4,
   "buy_cost" => 8000,
   "sell_price" => 10000,
@@ -65,7 +65,7 @@ trainer6 = Trainer.new({
 
 trainer7 = Trainer.new({
   "trainer_name" => "gt-2000",
-  "description" => "",
+  "description" => "ASICS GT-2000 6 Men's Running Shoes",
   "quantity" => 1,
   "buy_cost" => 6000,
   "sell_price" => 7000,
@@ -74,7 +74,7 @@ trainer7 = Trainer.new({
 
 trainer8 = Trainer.new({
   "trainer_name" => "Gel Cumulus",
-  "description" => "",
+  "description" => "ASICS Gel-Cumulus 19 Men's Running Shoes",
   "quantity" => 2,
   "buy_cost" => 5500,
   "sell_price" => 6000,
