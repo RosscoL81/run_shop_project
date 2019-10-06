@@ -1,6 +1,6 @@
 require_relative("../db/sql_runner")
 
-def Brand
+class Brand
 
   attr_reader :id, :name
 
