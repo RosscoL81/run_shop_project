@@ -10,7 +10,6 @@ CREATE TABLE trainers (
   id SERIAL8 primary key,
   trainer_name VARCHAR(255),
   description TEXT,
-  size INT8,
   quantity INT8,
   buy_cost INT8,
   sell_price INT8,

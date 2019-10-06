@@ -19,4 +19,12 @@ class Brand
     @id = brand_data.first()["id"].to_i()
   end
 
+  def Brand.all()
+    sql "SELECT * FROM brands"
+    brands = SqlRunner.run(sql)
+    result = brands.map{ |brand| Brand.new( brand)}
+    return result
+  end
+  
+
 end

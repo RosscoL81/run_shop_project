@@ -34,5 +34,12 @@ class Trainer
       @id = trainer_data.first()["id"].to_i()
     end
 
-    
+    def Trainer.all()
+      sql = "SELECT * FROM trainers"
+      trainers = SqlRunner.run(sql)
+      result = trainers.map{ |trainer| Trainer.new (trainer) }
+      return result
+    end
+
+
   end
