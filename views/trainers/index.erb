@@ -1,6 +1,6 @@
 <h1>Trainers</h1>
 
-<table>
+<table style="width:100%">
   <tr>
     <th>Brand</th>
     <th>Name</th>
@@ -11,7 +11,7 @@
   </tr>
   <% for trainer in @trainers %>
   <tr>
-    <td><%= trainer.brand_id%></td>
+    <td><%= trainer.brand.name%></td>
     <td><%= trainer.trainer_name %></td>
     <td><%= trainer.description %></td>
     <td><%= trainer.quantity %></td>

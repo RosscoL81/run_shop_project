@@ -1,4 +1,6 @@
 require_relative("../db/sql_runner")
+require_relative("./brand")
+
 
 class Trainer
 
@@ -34,8 +36,14 @@ class Trainer
       @id = trainer_data.first()["id"].to_i()
     end
 
+
+
     def brand()
-      brand = Brand.find(@brand_id)
+      sql = "SELECT * FROM brands WHERE id = $1"
+      values = [@brand_id]
+      results = SqlRunner.run(sql, values)
+      brand_hash = results[0]
+      brand = Brand.new(brand_hash)
       return brand
     end
 
