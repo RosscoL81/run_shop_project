@@ -1,0 +1,12 @@
+<form action="/trainers" method="post">
+  <label for="brand"></label>
+  <select name="brand_id" id="brand">
+    <% @brands.each do |brand| %>
+    <option value="<%= brand.id %>"><%= brand.name %></option>
+    <% end %>
+  </select>
+
+
+
+  <input type="submit" value="Add Trainers"/>
+</form>

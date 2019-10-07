@@ -11,7 +11,20 @@ get "/trainers" do
   erb (:"trainers/index")
 end
 
+get "/trainers/new" do
+  @brands = Brand.all()
+  erb (:"trainers/new")
+end
+
 get "/trainers/:id" do
   @trainers = Trainer.find(params[:id])
   erb (:"trainers/show")
 end
+
+
+
+
+#   @trainers = Trainer.new(params)
+#   @trainers.save()
+#   erb(:create)
+# end

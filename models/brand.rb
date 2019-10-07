@@ -29,7 +29,7 @@ class Brand
   end
 
   def Brand.all()
-    sql "SELECT * FROM brands"
+    sql = "SELECT * FROM brands"
     brands = SqlRunner.run(sql)
     result = brands.map{ |brand| Brand.new( brand)}
     return result
