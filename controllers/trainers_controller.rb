@@ -28,3 +28,8 @@ post "/trainers" do
   @trainers.save()
   redirect to "/trainers"
 end
+
+post "/trainers/:id/delete" do
+  Trainer.delete(params[:id])
+  redirect to "/trainers"
+end

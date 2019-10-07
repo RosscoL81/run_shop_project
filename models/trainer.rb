@@ -29,7 +29,7 @@ class Trainer
     brand_id) =
     ($1, $2, $3, $4, $5, $6)
     WHERE id = $7"
-    values = [@trainer_name, @description, @quantity, @buy_cost, @sell_price, @brand_id]
+    values = [@trainer_name, @description, @quantity, @buy_cost, @sell_price, @brand_id, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -62,6 +62,8 @@ class Trainer
       return brand
     end
 
+
+
     def Trainer.find(id)
       sql = "SELECT * FROM trainers WHERE id =$1"
       values = [id]
@@ -78,5 +80,11 @@ class Trainer
       return result
     end
 
+    def Trainer.delete(id)
+      sql = "DELETE FROM trainers
+      WHERE id = $1"
+      values = [id]
+      SqlRunner.run(sql, values)
+    end
 
   end

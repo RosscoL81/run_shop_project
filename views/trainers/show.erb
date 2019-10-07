@@ -5,6 +5,8 @@
 <p>Buy Cost: <%= @trainers.buy_cost %></p>
 <p>Sell Price: <%= @trainers.sell_price %></p>
 
+<hr>
+
 <% if (@trainers.quantity >1) %>
 <p><%= "trainers in stock!" %></p>
 <% elsif (@trainers.quantity ==1) %>
@@ -12,3 +14,9 @@
 <% else %>
 <p><%= "OUT OF STOCK!!!" %></p>
 <% end %>
+
+<hr>
+
+<form action="/trainers/<%= @trainers.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>

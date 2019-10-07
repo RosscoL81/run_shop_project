@@ -19,6 +19,23 @@ class Brand
     @id = brand_data.first()["id"].to_i()
   end
 
+  def update()
+    sql = "UPDATE brands
+    SET (name) = $1
+    where id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM brands
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+
+
   def Brand.find(id)
     sql = "SELECT * from brands
     WHERE id = $1"
