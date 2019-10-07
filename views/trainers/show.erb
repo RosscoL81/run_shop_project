@@ -1,0 +1,9 @@
+<p>Brand: <%= @trainers.brand.name %></p>
+<p>Trainers Name: <%= @trainers.trainer_name %></p>
+<p>Description: <%= @trainers.description %></p>
+<p>Quantity: <%= @trainers.quantity %></p>
+<p>Buy Cost: <%= @trainers.buy_cost %></p>
+<p>Sell Price: <%= @trainers.sell_price %></p>
+
+<% if @trainers.quantity >1 %>
+<p><%= return "trainers in stock!" %></p>

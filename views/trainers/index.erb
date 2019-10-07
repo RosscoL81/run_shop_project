@@ -8,6 +8,7 @@
     <th>Quantity</th>
     <th>Buy Cost</th>
     <th>Sell Cost</th>
+    <th>View Trainers</th>
   </tr>
   <% for trainer in @trainers %>
   <tr>
@@ -17,6 +18,7 @@
     <td><%= trainer.quantity %></td>
     <td><%= trainer.buy_cost %></td>
     <td><%= trainer.sell_price %></td>
+    <td><a href="/trainers/<%= trainer.id %>">View</a></td>
   </tr>
   <% end %>
 

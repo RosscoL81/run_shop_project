@@ -47,6 +47,15 @@ class Trainer
       return brand
     end
 
+    def Trainer.find(id)
+      sql = "SELECT * FROM trainers WHERE id =$1"
+      values = [id]
+      trainer = SqlRunner.run(sql, values)
+      results = Trainer.new(trainer.first)
+      return results
+    end
+
+
     def Trainer.all()
       sql = "SELECT * FROM trainers"
       trainers = SqlRunner.run(sql)

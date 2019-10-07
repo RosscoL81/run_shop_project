@@ -10,3 +10,8 @@ get "/trainers" do
   @trainers = Trainer.all()
   erb (:"trainers/index")
 end
+
+get "/trainers/:id" do
+  @trainers = Trainer.find(params[:id])
+  erb (:"trainers/show")
+end
