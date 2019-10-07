@@ -5,5 +5,10 @@
 <p>Buy Cost: <%= @trainers.buy_cost %></p>
 <p>Sell Price: <%= @trainers.sell_price %></p>
 
-<% if @trainers.quantity >1 %>
-<p><%= return "trainers in stock!" %></p>
+<% if (@trainers.quantity >1) %>
+<p><%= "trainers in stock!" %></p>
+<% elsif (@trainers.quantity ==1) %>
+<p><%= "LOW STOCK" %></p>
+<% else %>
+<p><%= "OUT OF STOCK!!!" %></p>
+<% end %>
