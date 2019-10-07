@@ -1,7 +1,23 @@
-<% for trainer in @trainers %>
-  <p>Name: <%= trainer.trainer_name() %></p>
-  <p>Description: <%= trainer.description() %></p>
+<h1>Trainers</h1>
 
-  <hr>
+<table>
+  <tr>
+    <th>Brand</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Quantity</th>
+    <th>Buy Cost</th>
+    <th>Sell Cost</th>
+  </tr>
+  <% for trainer in @trainers %>
+  <tr>
+    <td><%= trainer.brand_id%></td>
+    <td><%= trainer.trainer_name %></td>
+    <td><%= trainer.description %></td>
+    <td><%= trainer.quantity %></td>
+    <td><%= trainer.buy_cost %></td>
+    <td><%= trainer.sell_price %></td>
+  </tr>
+  <% end %>
 
-<% end %>
+</table>

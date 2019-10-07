@@ -34,6 +34,11 @@ class Trainer
       @id = trainer_data.first()["id"].to_i()
     end
 
+    def brand()
+      brand = Brand.find(@brand_id)
+      return brand
+    end
+
     def Trainer.all()
       sql = "SELECT * FROM trainers"
       trainers = SqlRunner.run(sql)
