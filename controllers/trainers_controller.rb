@@ -23,8 +23,8 @@ end
 
 
 
-
-#   @trainers = Trainer.new(params)
-#   @trainers.save()
-#   erb(:create)
-# end
+post "/trainers" do
+  @trainers = Trainer.new(params)
+  @trainers.save()
+  redirect to "/trainers"
+end

@@ -18,6 +18,21 @@ class Trainer
     @brand_id = options["brand_id"]
   end
 
+  def update()
+    sql = "UPDATE trainers
+    SET
+    (trainer_name,
+    description,
+    quantity,
+    buy_cost,
+    sell_price,
+    brand_id) =
+    ($1, $2, $3, $4, $5, $6)
+    WHERE id = $7"
+    values = [@trainer_name, @description, @quantity, @buy_cost, @sell_price, @brand_id]
+    SqlRunner.run(sql, values)
+  end
+
   def save()
     sql = "INSERT INTO trainers
     (
