@@ -13,5 +13,5 @@ CREATE TABLE trainers (
   quantity INT8,
   buy_cost INT8,
   sell_price INT8,
-  brand_id INT8 REFERENCES brands(id)
+  brand_id INT8 REFERENCES brands(id) ON DELETE CASCADE
 );

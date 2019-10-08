@@ -1,5 +1,6 @@
 require_relative("../db/sql_runner")
 require_relative("./brand")
+require("pry")
 
 
 class Trainer
@@ -15,7 +16,7 @@ class Trainer
     @quantity = options["quantity"].to_i()
     @buy_cost = options["buy_cost"].to_i()
     @sell_price = options["sell_price"].to_i()
-    @brand_id = options["brand_id"]
+    @brand_id = options["brand_id"].to_i
   end
 
   def update()
@@ -29,6 +30,7 @@ class Trainer
     brand_id) =
     ($1, $2, $3, $4, $5, $6)
     WHERE id = $7"
+    binding.pry
     values = [@trainer_name, @description, @quantity, @buy_cost, @sell_price, @brand_id, @id]
     SqlRunner.run(sql, values)
   end
@@ -85,6 +87,11 @@ class Trainer
       WHERE id = $1"
       values = [id]
       SqlRunner.run(sql, values)
+    end
+
+    def Trainer.delete_all
+      sql = "DELETE from trainers"
+      SqlRunner.run(sql)
     end
 
   end

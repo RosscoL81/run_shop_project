@@ -1,5 +1,10 @@
 require_relative("../models/brand")
 require_relative("../models/trainer")
+require("pry")
+
+Trainer.delete_all()
+Brand.delete_all()
+
 
 brand1 = Brand.new({"name" => "Adidas"})
 brand2 = Brand.new({"name" => "Brooks" })
@@ -89,3 +94,6 @@ trainer5.save()
 trainer6.save()
 trainer7.save()
 trainer8.save()
+
+binding.pry
+nil

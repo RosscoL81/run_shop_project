@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner")
+require("pry")
 
 class Brand
 
@@ -27,15 +28,6 @@ class Brand
     SqlRunner.run(sql, values)
   end
 
-  def delete()
-    sql = "DELETE FROM brands
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql, values)
-  end
-
-
-
   def Brand.find(id)
     sql = "SELECT * from brands
     WHERE id = $1"
@@ -52,5 +44,16 @@ class Brand
     return result
   end
 
+  def Brand.delete(id)
+    sql = "DELETE FROM brands
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
+  def Brand.delete_all
+    sql = "DELETE FROM brands"
+    SqlRunner.run(sql)
+  end
 
 end
