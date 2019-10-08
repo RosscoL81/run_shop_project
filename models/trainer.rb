@@ -30,7 +30,6 @@ class Trainer
     brand_id) =
     ($1, $2, $3, $4, $5, $6)
     WHERE id = $7"
-    binding.pry
     values = [@trainer_name, @description, @quantity, @buy_cost, @sell_price, @brand_id, @id]
     SqlRunner.run(sql, values)
   end

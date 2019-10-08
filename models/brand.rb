@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner")
+require_relative("./trainer")
 require("pry")
 
 class Brand
@@ -27,6 +28,14 @@ class Brand
     values = [@name, @id]
     SqlRunner.run(sql, values)
   end
+
+  def trainers()
+    sql = "SELECT * FROM trainers WHERE brand_id = $1"
+    values = [@id]
+    trainers = SqlRunner.run(sql, values)
+    return trainers.map{ |trainer| Trainer.new(trainer)  }
+  end
+
 
   def Brand.find(id)
     sql = "SELECT * from brands

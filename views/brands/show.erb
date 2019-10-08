@@ -1,0 +1,11 @@
+<p>Brand: <%= @brand.name %></p>
+<hr>
+<% for trainer in @brand.trainers %>
+<p>Trainer Name: <%= trainer.trainer_name %></p>
+<p>Description: <%= trainer.description %></p>
+<hr>
+<% end %>
+
+<form action="/brands/<%= @brand.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>
