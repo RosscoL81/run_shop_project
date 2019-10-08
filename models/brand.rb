@@ -23,7 +23,7 @@ class Brand
 
   def update()
     sql = "UPDATE brands
-    SET (name) = $1
+    SET name = $1
     where id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)

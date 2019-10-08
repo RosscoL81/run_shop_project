@@ -6,6 +6,8 @@
 <hr>
 <% end %>
 
+<p><a href="/brands/<%= @brand.id %>/edit">Edit</a></p>
+
 <form action="/brands/<%= @brand.id %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>

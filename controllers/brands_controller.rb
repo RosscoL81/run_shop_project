@@ -26,6 +26,16 @@ post "/brands" do
   redirect to "/trainers/new"
 end
 
+get "/brands/:id/edit" do
+  @brands = Brand.find(params["id"])
+  erb(:"brands/edit")
+end
+
+post "/brands/:id" do
+  Brand.new(params).update
+  redirect to "/brands"
+end
+
 post "/brands/:id/delete" do
   Brand.delete(params[:id])
   redirect to "/brands"
