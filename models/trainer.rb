@@ -53,7 +53,6 @@ class Trainer
     end
 
 
-
     def brand()
       sql = "SELECT * FROM brands WHERE id = $1"
       values = [@brand_id]
@@ -61,6 +60,21 @@ class Trainer
       brand_hash = results[0]
       brand = Brand.new(brand_hash)
       return brand
+    end
+
+    def format_buy_cost
+      new_buy_amount = @buy_cost/100
+      return "£#{new_buy_amount}.00"
+    end
+
+    def format_sell_price
+      new_sell_amount = @sell_price/100
+      return "£#{new_sell_amount}.00"
+    end
+
+    def markup
+      markup_amount = (@sell_price - @buy_cost)/100
+      return "£#{markup_amount}.00"
     end
 
 
