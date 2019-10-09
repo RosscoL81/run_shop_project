@@ -1,1 +1,57 @@
+table, th, td {
+  border: 1px solid black;
+}
 
+table {
+  margin: 0 auto;
+}
+
+th, td {
+  text-align: center;
+}
+
+th {
+  height: 50px;
+}
+
+td {
+  height: 30px;
+}
+
+h1 {
+  font-style: italic;
+  font-family: Garamond;
+  text-align: center;
+}
+
+p {
+  font-family: Arial;
+}
+
+
+#menu {
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align: left;
+
+}
+
+.menu-item {
+  display: inline-block;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+body {
+background-color: LightSkyBlue;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

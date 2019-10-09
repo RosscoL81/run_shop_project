@@ -1,12 +1,15 @@
+<br>
 <p>Brand: <%= @trainers.brand.name %></p>
 <p>Trainers Name: <%= @trainers.trainer_name %></p>
 <p>Description: <%= @trainers.description %></p>
 <p>Quantity: <%= @trainers.quantity %></p>
-<p>Buy Cost: <%= @trainers.buy_cost %></p>
-<p>Sell Price: <%= @trainers.sell_price %></p>
-
+<p>Buy Cost: <%= @trainers.format_buy_cost %></p>
+<p>Sell Price: <%= @trainers.format_sell_price %></p>
+<br>
 <hr>
 
+
+<br>
 <% if (@trainers.quantity >1) %>
 <p><%= "trainers in stock!" %></p>
 <% elsif (@trainers.quantity ==1) %>
@@ -15,6 +18,7 @@
 <p><%= "OUT OF STOCK!!!" %></p>
 <% end %>
 
+<br>
 <hr>
 
 <p><a href="/trainers/<%= @trainers.id %>/edit">Edit</a></p>
